@@ -1,0 +1,23 @@
+1.安装babel
+	https://babeljs.io/
+2.学习ES6
+	http://es6.ruanyifeng.com/#docs/intro
+3.浏览器环境
+
+
+
+开始
+1.let和const
+（1）let
+（2）let为Javascript增加了块级作用域
+（3）const声明一个常量，不能修改，声明时赋值
+（4）const和let都是块级作用域
+（5）用const定义复合类型的变量时，可以改变内部的值
+
+
+2.变量的解构赋值
+（1）数组的解构赋值
+（2）对象的解构赋值
+（3）字符串的解构赋值
+（4）数值和布尔值的解构赋值	
+（5）函数参数的解构

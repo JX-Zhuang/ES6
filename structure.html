@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        //1.数组解构
+        //        var [a,b,c]=[2,3,4];
+        //        console.log(a);
+        //        var [d=10]=[null];
+        //        var [e=10]=[undefined];
+        //        console.log(d);
+        //        console.log(e);
+        //2.对象解构
+        //        var {first:first,second}={first:'one',second:'two'};
+        //        console.log(first);
+        //        let f;
+        //        ({f}={f:11});
+        //        console.log(f);
+        //        var obj={
+        //            p:[
+        //                'hello',
+        //                {y:'world'}
+        //            ]
+        //        };
+        //        var {p:[x,{y}]}=obj;
+        //        console.log(x,y);
+        //        var obj={};
+        //        var arr=[];
+        //        ({foo:obj.name,bar:arr[0]}={foo:'zjx',bar:true});
+        //        console.log(obj);
+        //        console.log(arr);
+        //        var {foo}={bar:'bar'};
+        //        //var {foo:{name}}={bar:'bar'};
+        //        console.log(foo);
+        //       // console.log(foo.name);
+        //        var x;
+        //        ({x}={x:0});
+        //        console.log(x);
+        //        var {pe:pr}={pe:10};
+        //        console.log(pr=100)
+        //3.字符串的解构赋值
+        //        var [a,b,c]='hello';
+        //        console.log(a+' '+b+' '+c);
+        //        var {length:len}='hello';
+        //        console.log(len)
+        //4.数值和布尔值的解构赋值
+        //let {toString:s}=123;
+        //        console.log(s);
+        //        let {toString:s}=true;
+        //        console.log(s)
+        //        let {prop:x}=undefined;
+        //        console.log(x)
+        //5.函数参数的解构
+        //        function add([x,y]){
+        //            console.log(x+y);
+        //        }
+        //        add([10,20]);
+        //        var aa=[[1,2],[10,20]].map(([a,b]) => a + b );
+        //        console.log(aa);
+        //        function move({a=10,b=20}={}){
+        //            console.log([a,b]);
+        //        }
+        //        move({a:0,b:10});
+        //        move({a:10});
+        //        move({});
+        //        move();//给a,b指定默认值
+        //        function move2({a,b}={a:0,b:0}){
+        //            console.log([a,b]);
+        //        }
+        //        move2({a:10});
+        //        move2();//给参数指定默认值
+        //        function C(){}
+        //        C.prototype.method=function(){
+        //            console.log('hello world');
+        //        }
+        //        function CChild(){}
+        //        CChild.prototype=new C();
+        //        CChild.prototype.methodC=function(){
+        //            console.log('javascript');
+        //        }
+        //        var c=new CChild();
+        //        c.methodC();
+        //        c.method();
+
+        //es6
+        class C{
+            constructor(x,y){
+                this.x=x;
+                this.y=y;
+            }
+            method() {
+                alert('this.x:'+this.x+',this.y:'+this.y);
+            }
+        };
+        let c=new C(10,1);
+        c.method();
+        class CChild extends C{
+            constructor(x,y,z){
+                super(x,y);
+                this.z=z;
+            }
+            methodC(){
+                super.method();
+                alert(this.z)
+            }
+        }
+        var cchild=new CChild(100,1000,'name');
+        cchild.methodC();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script type="text/babel">
+        var tmp = new Date();
+        function f(){
+            if (true){
+                let tmp = "hello world";
+            }
+            console.log(tmp);
+        }
+        f();
+        let A;
+        {
+            let a=10;
+            A=function(){
+                console.log(a);
+            }
+        }
+        A();
+        {const c=100;
+       // c=100;
+        console.log(c);}
+        const c=10;
+        console.log(c);
+        const arr={first:'a'};
+        console.log(arr)
+        arr.first='first';
+        console.log(arr);
+    </script>
+    <script src="structure.js"></script>
+</head>
+
+<body>
+</body>
+
+</html>
